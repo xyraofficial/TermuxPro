@@ -1,4 +1,4 @@
-package com.termux.shared.terminal.io.extrakeys;
+package com.termux.mod.mod.shared.terminal.io.extrakeys;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -40,7 +40,7 @@ import androidx.annotation.Nullable;
  * it with a {@link androidx.viewpager.widget.ViewPager}.:
  * {@code
  * <?xml version="1.0" encoding="utf-8"?>
- * <com.termux.shared.terminal.io.extrakeys.ExtraKeysView xmlns:android="http://schemas.android.com/apk/res/android"
+ * <com.termux.mod.mod.shared.terminal.io.extrakeys.ExtraKeysView xmlns:android="http://schemas.android.com/apk/res/android"
  *     android:id="@+id/extra_keys"
  *     style="?android:attr/buttonBarStyle"
  *     android:layout_width="match_parent"
@@ -66,7 +66,7 @@ import androidx.annotation.Nullable;
  * The {@link ExtraKeysInfo} is created by TermuxAppSharedProperties.setExtraKeys().
  * Then its got and the view height is adjusted in TermuxActivity.setTerminalToolbarHeight().
  * The client used is TermuxTerminalExtraKeys, which extends
- * {@link com.termux.shared.terminal.io.TerminalExtraKeys} to handle Termux app specific logic and
+ * {@link com.termux.mod.mod.shared.terminal.io.TerminalExtraKeys} to handle Termux app specific logic and
  * leave the rest to the super class.
  */
 public final class ExtraKeysView extends GridLayout {

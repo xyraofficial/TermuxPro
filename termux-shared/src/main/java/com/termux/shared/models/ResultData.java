@@ -1,12 +1,12 @@
-package com.termux.shared.models;
+package com.termux.mod.mod.shared.models;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.models.errors.Errno;
-import com.termux.shared.models.errors.Error;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.markdown.MarkdownUtils;
+import com.termux.mod.mod.shared.models.errors.Errno;
+import com.termux.mod.mod.shared.models.errors.Error;
 
 import java.io.Serializable;
 import java.util.ArrayList;

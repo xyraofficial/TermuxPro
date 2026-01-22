@@ -1,4 +1,4 @@
-package com.termux.app.utils;
+package com.termux.mod.mod.app.utils;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -8,22 +8,22 @@ import android.os.Environment;
 
 import androidx.annotation.Nullable;
 
-import com.termux.R;
-import com.termux.shared.activities.ReportActivity;
-import com.termux.shared.models.errors.Error;
-import com.termux.shared.notification.NotificationUtils;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.models.ReportInfo;
-import com.termux.app.models.UserAction;
-import com.termux.shared.notification.TermuxNotificationUtils;
-import com.termux.shared.settings.preferences.TermuxAppSharedPreferences;
-import com.termux.shared.settings.preferences.TermuxPreferenceConstants;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.termux.AndroidUtils;
-import com.termux.shared.termux.TermuxUtils;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.shared.activities.ReportActivity;
+import com.termux.mod.mod.shared.models.errors.Error;
+import com.termux.mod.mod.shared.notification.NotificationUtils;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.models.ReportInfo;
+import com.termux.mod.mod.app.models.UserAction;
+import com.termux.mod.mod.shared.notification.TermuxNotificationUtils;
+import com.termux.mod.mod.shared.settings.preferences.TermuxAppSharedPreferences;
+import com.termux.mod.mod.shared.settings.preferences.TermuxPreferenceConstants;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.termux.AndroidUtils;
+import com.termux.mod.mod.shared.termux.TermuxUtils;
 
-import com.termux.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
 
 import java.nio.charset.Charset;
 
@@ -34,7 +34,7 @@ public class CrashUtils {
     /**
      * Notify the user of an app crash at last run by reading the crash info from the crash log file
      * at {@link TermuxConstants#TERMUX_CRASH_LOG_FILE_PATH}. The crash log file would have been
-     * created by {@link com.termux.shared.crash.CrashHandler}.
+     * created by {@link com.termux.mod.mod.shared.crash.CrashHandler}.
      *
      * If the crash log file exists and is not empty and
      * {@link TermuxPreferenceConstants.TERMUX_APP#KEY_CRASH_REPORT_NOTIFICATIONS_ENABLED} is

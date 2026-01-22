@@ -1,4 +1,4 @@
-package com.termux.terminal;
+package com.termux.mod.mod.terminal;
 
 public class ScreenBufferTest extends TerminalTestCase {
 

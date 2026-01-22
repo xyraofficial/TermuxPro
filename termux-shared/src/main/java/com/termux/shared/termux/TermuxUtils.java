@@ -1,4 +1,4 @@
-package com.termux.shared.termux;
+package com.termux.mod.mod.shared.termux;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -9,16 +9,16 @@ import android.content.pm.ResolveInfo;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.R;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.file.TermuxFileUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.models.ExecutionCommand;
-import com.termux.shared.models.errors.Error;
-import com.termux.shared.packages.PackageUtils;
-import com.termux.shared.shell.TermuxShellEnvironmentClient;
-import com.termux.shared.shell.TermuxTask;
+import com.termux.mod.mod.shared.R;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.file.TermuxFileUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.markdown.MarkdownUtils;
+import com.termux.mod.mod.shared.models.ExecutionCommand;
+import com.termux.mod.mod.shared.models.errors.Error;
+import com.termux.mod.mod.shared.packages.PackageUtils;
+import com.termux.mod.mod.shared.shell.TermuxShellEnvironmentClient;
+import com.termux.mod.mod.shared.shell.TermuxTask;
 
 import org.apache.commons.io.IOUtils;
 
@@ -108,9 +108,9 @@ public class TermuxUtils {
      * Check if Termux app is installed and enabled. This can be used by external apps that don't
      * share `sharedUserId` with the Termux app.
      *
-     * If your third-party app is targeting sdk `30` (android `11`), then it needs to add `com.termux`
+     * If your third-party app is targeting sdk `30` (android `11`), then it needs to add `com.termux.mod.mod`
      * package to the `queries` element or request `QUERY_ALL_PACKAGES` permission in its
-     * `AndroidManifest.xml`. Otherwise it will get `PackageSetting{...... com.termux/......} BLOCKED`
+     * `AndroidManifest.xml`. Otherwise it will get `PackageSetting{...... com.termux.mod.mod/......} BLOCKED`
      * errors in `logcat` and `RUN_COMMAND` won't work.
      * Check [package-visibility](https://developer.android.com/training/basics/intents/package-visibility#package-name),
      * `QUERY_ALL_PACKAGES` [googleplay policy](https://support.google.com/googleplay/android-developer/answer/10158779
@@ -119,7 +119,7 @@ public class TermuxUtils {
      * {@code
      * <manifest
      *     <queries>
-     *         <package android:name="com.termux" />
+     *         <package android:name="com.termux.mod.mod" />
      *    </queries>
      * </manifest>
      * }
@@ -407,7 +407,7 @@ public class TermuxUtils {
     public static String geAPTInfoMarkdownString(@NonNull final Context context) {
 
         String aptInfoScript;
-        InputStream inputStream = context.getResources().openRawResource(com.termux.shared.R.raw.apt_info_script);
+        InputStream inputStream = context.getResources().openRawResource(com.termux.mod.mod.shared.R.raw.apt_info_script);
         try {
             aptInfoScript = IOUtils.toString(inputStream, Charset.defaultCharset());
         } catch (IOException e) {

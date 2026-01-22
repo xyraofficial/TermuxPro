@@ -1,4 +1,4 @@
-package com.termux.shared.models.errors;
+package com.termux.mod.mod.shared.models.errors;
 
 /** The {@link Class} that defines ResultSender error messages and codes. */
 public class ResultSenderErrno extends Errno {

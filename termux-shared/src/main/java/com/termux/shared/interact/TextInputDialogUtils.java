@@ -1,4 +1,4 @@
-package com.termux.shared.interact;
+package com.termux.mod.mod.shared.interact;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.termux.shared.R;
+import com.termux.mod.mod.shared.R;
 
 public final class TextInputDialogUtils {
 

@@ -1,4 +1,4 @@
-package com.termux.terminal;
+package com.termux.mod.mod.terminal;
 
 /**
  * The interface for communication between {@link TerminalSession} and its client. It is used to

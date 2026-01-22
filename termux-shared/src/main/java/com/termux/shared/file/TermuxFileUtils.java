@@ -1,20 +1,20 @@
-package com.termux.shared.file;
+package com.termux.mod.mod.shared.file;
 
 import android.content.Context;
 import android.os.Environment;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.models.ExecutionCommand;
-import com.termux.shared.models.errors.Error;
-import com.termux.shared.models.errors.FileUtilsErrno;
-import com.termux.shared.shell.TermuxShellEnvironmentClient;
-import com.termux.shared.shell.TermuxTask;
-import com.termux.shared.termux.AndroidUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.markdown.MarkdownUtils;
+import com.termux.mod.mod.shared.models.ExecutionCommand;
+import com.termux.mod.mod.shared.models.errors.Error;
+import com.termux.mod.mod.shared.models.errors.FileUtilsErrno;
+import com.termux.mod.mod.shared.shell.TermuxShellEnvironmentClient;
+import com.termux.mod.mod.shared.shell.TermuxTask;
+import com.termux.mod.mod.shared.termux.AndroidUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.termux.TermuxUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -235,10 +235,10 @@ public class TermuxFileUtils {
      * https://unix.stackexchange.com/a/571959
      *
      *
-     * Also note that running `/system/bin/ls -lhd /data/user/0/com.termux` as secondary user will result
-     * in `ls: /data/user/0/com.termux: Permission denied` where `0` is primary user id but running
-     * `/system/bin/ls -lhd /data/user/10/com.termux` will result in
-     * `drwx------ 6 u10_a149 u10_a149 4.0K 2021-xx-xx xx:xx /data/user/10/com.termux` where `10` is
+     * Also note that running `/system/bin/ls -lhd /data/user/0/com.termux.mod.mod` as secondary user will result
+     * in `ls: /data/user/0/com.termux.mod.mod: Permission denied` where `0` is primary user id but running
+     * `/system/bin/ls -lhd /data/user/10/com.termux.mod.mod` will result in
+     * `drwx------ 6 u10_a149 u10_a149 4.0K 2021-xx-xx xx:xx /data/user/10/com.termux.mod.mod` where `10` is
      * secondary user id. So can't stat directory (not contents) of primary user from secondary user
      * but can the other way around. However, this is happening on android 10 avd, but not on android
      * 11 avd.

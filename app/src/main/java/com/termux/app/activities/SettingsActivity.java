@@ -1,4 +1,4 @@
-package com.termux.app.activities;
+package com.termux.mod.mod.app.activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,20 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import com.termux.R;
-import com.termux.shared.activities.ReportActivity;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.models.ReportInfo;
-import com.termux.app.models.UserAction;
-import com.termux.shared.interact.ShareUtils;
-import com.termux.shared.packages.PackageUtils;
-import com.termux.shared.settings.preferences.TermuxAPIAppSharedPreferences;
-import com.termux.shared.settings.preferences.TermuxFloatAppSharedPreferences;
-import com.termux.shared.settings.preferences.TermuxTaskerAppSharedPreferences;
-import com.termux.shared.settings.preferences.TermuxWidgetAppSharedPreferences;
-import com.termux.shared.termux.AndroidUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxUtils;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.shared.activities.ReportActivity;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.models.ReportInfo;
+import com.termux.mod.mod.app.models.UserAction;
+import com.termux.mod.mod.shared.interact.ShareUtils;
+import com.termux.mod.mod.shared.packages.PackageUtils;
+import com.termux.mod.mod.shared.settings.preferences.TermuxAPIAppSharedPreferences;
+import com.termux.mod.mod.shared.settings.preferences.TermuxFloatAppSharedPreferences;
+import com.termux.mod.mod.shared.settings.preferences.TermuxTaskerAppSharedPreferences;
+import com.termux.mod.mod.shared.settings.preferences.TermuxWidgetAppSharedPreferences;
+import com.termux.mod.mod.shared.termux.AndroidUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.termux.TermuxUtils;
 
 public class SettingsActivity extends AppCompatActivity {
 

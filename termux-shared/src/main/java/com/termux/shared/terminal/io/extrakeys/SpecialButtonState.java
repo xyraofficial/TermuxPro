@@ -1,4 +1,4 @@
-package com.termux.shared.terminal.io.extrakeys;
+package com.termux.mod.mod.shared.terminal.io.extrakeys;
 
 import android.widget.Button;
 

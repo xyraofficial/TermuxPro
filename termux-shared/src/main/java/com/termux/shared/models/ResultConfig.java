@@ -1,11 +1,11 @@
-package com.termux.shared.models;
+package com.termux.mod.mod.shared.models;
 
 import android.app.PendingIntent;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.markdown.MarkdownUtils;
 
 import java.util.Formatter;
 

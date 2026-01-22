@@ -1,11 +1,11 @@
-package com.termux.shared.crash;
+package com.termux.mod.mod.shared.crash;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.termux.TermuxUtils;
 
 public class TermuxCrashUtils implements CrashHandler.CrashHandlerClient {
 

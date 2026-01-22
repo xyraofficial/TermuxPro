@@ -1,4 +1,4 @@
-package com.termux.app.terminal.io;
+package com.termux.mod.mod.app.terminal.io;
 
 import android.annotation.SuppressLint;
 import android.view.Gravity;
@@ -7,10 +7,10 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.termux.app.terminal.TermuxTerminalSessionClient;
-import com.termux.app.terminal.TermuxTerminalViewClient;
-import com.termux.shared.terminal.io.TerminalExtraKeys;
-import com.termux.view.TerminalView;
+import com.termux.mod.mod.app.terminal.TermuxTerminalSessionClient;
+import com.termux.mod.mod.app.terminal.TermuxTerminalViewClient;
+import com.termux.mod.mod.shared.terminal.io.TerminalExtraKeys;
+import com.termux.mod.mod.view.TerminalView;
 
 public class TermuxTerminalExtraKeys extends TerminalExtraKeys {
 

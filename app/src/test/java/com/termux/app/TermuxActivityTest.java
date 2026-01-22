@@ -1,6 +1,6 @@
-package com.termux.app;
+package com.termux.mod.mod.app;
 
-import com.termux.shared.data.UrlUtils;
+import com.termux.mod.mod.shared.data.UrlUtils;
 
 import org.junit.Assert;
 import org.junit.Test;

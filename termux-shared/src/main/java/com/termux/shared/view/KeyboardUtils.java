@@ -1,4 +1,4 @@
-package com.termux.shared.view;
+package com.termux.mod.mod.shared.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import androidx.annotation.NonNull;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.termux.shared.logger.Logger;
+import com.termux.mod.mod.shared.logger.Logger;
 
 public class KeyboardUtils {
 
@@ -179,7 +179,7 @@ public class KeyboardUtils {
              * keyboard is opened instead of the keyboard opening on top of the view (hiding stuff).
              * If the "Show soft keyboard" toggle was disabled, then this resizing shouldn't happen.
              * But it seems resizing does happen, but keyboard is never opened since its not supposed to.
-             * https://github.com/termux/termux-app/issues/1995#issuecomment-837080079
+             * https://github.com.termux.mod.mod/termux-app/issues/1995#issuecomment-837080079
              */
             // If soft keyboard is disabled by user only if hardware keyboard is connected
             if(isSoftKeyboardEnabledOnlyIfNoHardware) {

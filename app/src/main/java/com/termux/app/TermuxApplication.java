@@ -1,10 +1,10 @@
-package com.termux.app;
+package com.termux.mod.mod.app;
 
 import android.app.Application;
 
-import com.termux.shared.crash.TermuxCrashUtils;
-import com.termux.shared.settings.preferences.TermuxAppSharedPreferences;
-import com.termux.shared.logger.Logger;
+import com.termux.mod.mod.shared.crash.TermuxCrashUtils;
+import com.termux.mod.mod.shared.settings.preferences.TermuxAppSharedPreferences;
+import com.termux.mod.mod.shared.logger.Logger;
 
 
 public class TermuxApplication extends Application {

@@ -1,4 +1,4 @@
-package com.termux.shared.packages;
+package com.termux.mod.mod.shared.packages;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -12,8 +12,8 @@ import android.provider.Settings;
 
 import androidx.core.content.ContextCompat;
 
-import com.termux.shared.R;
-import com.termux.shared.logger.Logger;
+import com.termux.mod.mod.shared.R;
+import com.termux.mod.mod.shared.logger.Logger;
 
 import java.util.Arrays;
 

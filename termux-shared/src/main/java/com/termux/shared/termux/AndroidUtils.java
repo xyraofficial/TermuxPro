@@ -1,4 +1,4 @@
-package com.termux.shared.termux;
+package com.termux.mod.mod.shared.termux;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,11 +10,11 @@ import android.system.OsConstants;
 import androidx.annotation.NonNull;
 
 import com.google.common.base.Joiner;
-import com.termux.shared.android.SELinuxUtils;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.packages.PackageUtils;
+import com.termux.mod.mod.shared.android.SELinuxUtils;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.markdown.MarkdownUtils;
+import com.termux.mod.mod.shared.packages.PackageUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;

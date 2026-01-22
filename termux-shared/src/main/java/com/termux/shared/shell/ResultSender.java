@@ -1,4 +1,4 @@
-package com.termux.shared.shell;
+package com.termux.mod.mod.shared.shell;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -6,18 +6,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.termux.shared.R;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.models.errors.Error;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.models.ResultConfig;
-import com.termux.shared.models.ResultData;
-import com.termux.shared.models.errors.FunctionErrno;
-import com.termux.shared.models.errors.ResultSenderErrno;
-import com.termux.shared.termux.AndroidUtils;
-import com.termux.shared.termux.TermuxConstants.RESULT_SENDER;
+import com.termux.mod.mod.shared.R;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.markdown.MarkdownUtils;
+import com.termux.mod.mod.shared.models.errors.Error;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.models.ResultConfig;
+import com.termux.mod.mod.shared.models.ResultData;
+import com.termux.mod.mod.shared.models.errors.FunctionErrno;
+import com.termux.mod.mod.shared.models.errors.ResultSenderErrno;
+import com.termux.mod.mod.shared.termux.AndroidUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants.RESULT_SENDER;
 
 public class ResultSender {
 

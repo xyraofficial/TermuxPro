@@ -1,17 +1,17 @@
-package com.termux.shared.shell;
+package com.termux.mod.mod.shared.shell;
 
 import android.content.Context;
 import android.system.OsConstants;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.R;
-import com.termux.shared.models.ExecutionCommand;
-import com.termux.shared.models.ResultData;
-import com.termux.shared.models.errors.Errno;
-import com.termux.shared.logger.Logger;
-import com.termux.terminal.TerminalSession;
-import com.termux.terminal.TerminalSessionClient;
+import com.termux.mod.mod.shared.R;
+import com.termux.mod.mod.shared.models.ExecutionCommand;
+import com.termux.mod.mod.shared.models.ResultData;
+import com.termux.mod.mod.shared.models.errors.Errno;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.terminal.TerminalSession;
+import com.termux.mod.mod.terminal.TerminalSessionClient;
 
 import java.io.File;
 

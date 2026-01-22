@@ -1,12 +1,12 @@
-package com.termux.shared.settings.properties;
+package com.termux.mod.mod.shared.settings.properties;
 
 import android.content.Context;
 import android.content.res.Configuration;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.logger.Logger;
-import com.termux.shared.data.DataUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.data.DataUtils;
 
 import java.io.File;
 import java.util.HashMap;

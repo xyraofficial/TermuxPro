@@ -1,4 +1,4 @@
-package com.termux.shared.file;
+package com.termux.mod.mod.shared.file;
 
 import android.os.Build;
 import android.system.Os;
@@ -6,14 +6,14 @@ import android.system.Os;
 import androidx.annotation.NonNull;
 
 import com.google.common.io.RecursiveDeleteOption;
-import com.termux.shared.file.filesystem.FileType;
-import com.termux.shared.file.filesystem.FileTypes;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.models.errors.Errno;
-import com.termux.shared.models.errors.Error;
-import com.termux.shared.models.errors.FileUtilsErrno;
-import com.termux.shared.models.errors.FunctionErrno;
+import com.termux.mod.mod.shared.file.filesystem.FileType;
+import com.termux.mod.mod.shared.file.filesystem.FileTypes;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.models.errors.Errno;
+import com.termux.mod.mod.shared.models.errors.Error;
+import com.termux.mod.mod.shared.models.errors.FileUtilsErrno;
+import com.termux.mod.mod.shared.models.errors.FunctionErrno;
 
 import org.apache.commons.io.filefilter.AgeFileFilter;
 import org.apache.commons.io.filefilter.IOFileFilter;

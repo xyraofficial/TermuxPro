@@ -1,4 +1,4 @@
-package com.termux.filepicker;
+package com.termux.mod.mod.filepicker;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,15 +7,15 @@ import android.net.Uri;
 import android.provider.OpenableColumns;
 import android.util.Patterns;
 
-import com.termux.R;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.data.IntentUtils;
-import com.termux.shared.interact.MessageDialogUtils;
-import com.termux.shared.interact.TextInputDialogUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
-import com.termux.app.TermuxService;
-import com.termux.shared.logger.Logger;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.data.IntentUtils;
+import com.termux.mod.mod.shared.interact.MessageDialogUtils;
+import com.termux.mod.mod.shared.interact.TextInputDialogUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
+import com.termux.mod.mod.app.TermuxService;
+import com.termux.mod.mod.shared.logger.Logger;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;

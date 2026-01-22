@@ -1,12 +1,12 @@
-package com.termux.shared.settings.properties;
+package com.termux.mod.mod.shared.settings.properties;
 
 import androidx.annotation.NonNull;
 
 import com.google.common.collect.ImmutableBiMap;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.logger.Logger;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.view.TerminalView;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.terminal.TerminalEmulator;
+import com.termux.mod.mod.view.TerminalView;
 
 import java.io.File;
 import java.util.Arrays;

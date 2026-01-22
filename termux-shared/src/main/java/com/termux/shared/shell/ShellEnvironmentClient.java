@@ -1,4 +1,4 @@
-package com.termux.shared.shell;
+package com.termux.mod.mod.shared.shell;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.termux.shared.logger;
+package com.termux.mod.mod.shared.logger;
 
 import android.content.Context;
 import android.os.Handler;
@@ -6,9 +6,9 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.termux.shared.R;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.R;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
 
 import java.io.IOException;
 import java.io.PrintWriter;

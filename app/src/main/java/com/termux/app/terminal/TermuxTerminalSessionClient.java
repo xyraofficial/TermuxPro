@@ -1,4 +1,4 @@
-package com.termux.app.terminal;
+package com.termux.mod.mod.app.terminal;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -12,20 +12,20 @@ import android.media.SoundPool;
 import android.text.TextUtils;
 import android.widget.ListView;
 
-import com.termux.R;
-import com.termux.shared.shell.TermuxSession;
-import com.termux.shared.interact.TextInputDialogUtils;
-import com.termux.shared.interact.ShareUtils;
-import com.termux.app.TermuxActivity;
-import com.termux.shared.terminal.TermuxTerminalSessionClientBase;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.app.TermuxService;
-import com.termux.shared.settings.properties.TermuxPropertyConstants;
-import com.termux.shared.terminal.io.BellHandler;
-import com.termux.shared.logger.Logger;
-import com.termux.terminal.TerminalColors;
-import com.termux.terminal.TerminalSession;
-import com.termux.terminal.TextStyle;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.shared.shell.TermuxSession;
+import com.termux.mod.mod.shared.interact.TextInputDialogUtils;
+import com.termux.mod.mod.shared.interact.ShareUtils;
+import com.termux.mod.mod.app.TermuxActivity;
+import com.termux.mod.mod.shared.terminal.TermuxTerminalSessionClientBase;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.app.TermuxService;
+import com.termux.mod.mod.shared.settings.properties.TermuxPropertyConstants;
+import com.termux.mod.mod.shared.terminal.io.BellHandler;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.terminal.TerminalColors;
+import com.termux.mod.mod.terminal.TerminalSession;
+import com.termux.mod.mod.terminal.TextStyle;
 
 import java.io.File;
 import java.io.FileInputStream;

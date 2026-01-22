@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termux.mod.mod.app;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -21,30 +21,30 @@ import android.widget.ArrayAdapter;
 
 import androidx.annotation.Nullable;
 
-import com.termux.R;
-import com.termux.app.settings.properties.TermuxAppSharedProperties;
-import com.termux.app.terminal.TermuxTerminalSessionClient;
-import com.termux.app.utils.PluginUtils;
-import com.termux.shared.data.IntentUtils;
-import com.termux.shared.models.errors.Errno;
-import com.termux.shared.shell.ShellUtils;
-import com.termux.shared.shell.TermuxShellEnvironmentClient;
-import com.termux.shared.shell.TermuxShellUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_ACTIVITY;
-import com.termux.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
-import com.termux.shared.settings.preferences.TermuxAppSharedPreferences;
-import com.termux.shared.shell.TermuxSession;
-import com.termux.shared.terminal.TermuxTerminalSessionClientBase;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.notification.NotificationUtils;
-import com.termux.shared.packages.PermissionUtils;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.models.ExecutionCommand;
-import com.termux.shared.shell.TermuxTask;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.terminal.TerminalSession;
-import com.termux.terminal.TerminalSessionClient;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.app.settings.properties.TermuxAppSharedProperties;
+import com.termux.mod.mod.app.terminal.TermuxTerminalSessionClient;
+import com.termux.mod.mod.app.utils.PluginUtils;
+import com.termux.mod.mod.shared.data.IntentUtils;
+import com.termux.mod.mod.shared.models.errors.Errno;
+import com.termux.mod.mod.shared.shell.ShellUtils;
+import com.termux.mod.mod.shared.shell.TermuxShellEnvironmentClient;
+import com.termux.mod.mod.shared.shell.TermuxShellUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_ACTIVITY;
+import com.termux.mod.mod.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
+import com.termux.mod.mod.shared.settings.preferences.TermuxAppSharedPreferences;
+import com.termux.mod.mod.shared.shell.TermuxSession;
+import com.termux.mod.mod.shared.terminal.TermuxTerminalSessionClientBase;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.notification.NotificationUtils;
+import com.termux.mod.mod.shared.packages.PermissionUtils;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.models.ExecutionCommand;
+import com.termux.mod.mod.shared.shell.TermuxTask;
+import com.termux.mod.mod.terminal.TerminalEmulator;
+import com.termux.mod.mod.terminal.TerminalSession;
+import com.termux.mod.mod.terminal.TerminalSessionClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -273,7 +273,7 @@ public final class TermuxService extends Service implements TermuxTask.TermuxTas
         for (int i = 0; i < pendingPluginExecutionCommands.size(); i++) {
             ExecutionCommand executionCommand = pendingPluginExecutionCommands.get(i);
             if (!executionCommand.shouldNotProcessResults() && executionCommand.isPluginExecutionCommandWithPendingResult()) {
-                if (executionCommand.setStateFailed(Errno.ERRNO_CANCELLED.getCode(), this.getString(com.termux.shared.R.string.error_execution_cancelled))) {
+                if (executionCommand.setStateFailed(Errno.ERRNO_CANCELLED.getCode(), this.getString(com.termux.mod.mod.shared.R.string.error_execution_cancelled))) {
                     PluginUtils.processPluginExecutionCommandResult(this, LOG_TAG, executionCommand);
                 }
             }

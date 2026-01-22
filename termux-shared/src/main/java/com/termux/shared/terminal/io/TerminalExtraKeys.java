@@ -1,4 +1,4 @@
-package com.termux.shared.terminal.io;
+package com.termux.mod.mod.shared.terminal.io;
 
 import android.view.KeyEvent;
 import android.view.View;
@@ -6,12 +6,12 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.terminal.io.extrakeys.ExtraKeyButton;
-import com.termux.shared.terminal.io.extrakeys.ExtraKeysView;
-import com.termux.shared.terminal.io.extrakeys.SpecialButton;
-import com.termux.view.TerminalView;
+import com.termux.mod.mod.shared.terminal.io.extrakeys.ExtraKeyButton;
+import com.termux.mod.mod.shared.terminal.io.extrakeys.ExtraKeysView;
+import com.termux.mod.mod.shared.terminal.io.extrakeys.SpecialButton;
+import com.termux.mod.mod.view.TerminalView;
 
-import static com.termux.shared.terminal.io.extrakeys.ExtraKeysConstants.PRIMARY_KEY_CODES_FOR_STRINGS;
+import static com.termux.mod.mod.shared.terminal.io.extrakeys.ExtraKeysConstants.PRIMARY_KEY_CODES_FOR_STRINGS;
 
 
 public class TerminalExtraKeys implements ExtraKeysView.IExtraKeysView {

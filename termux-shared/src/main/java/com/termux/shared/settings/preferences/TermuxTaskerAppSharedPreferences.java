@@ -1,4 +1,4 @@
-package com.termux.shared.settings.preferences;
+package com.termux.mod.mod.shared.settings.preferences;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,10 +7,10 @@ import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.termux.shared.packages.PackageUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.settings.preferences.TermuxPreferenceConstants.TERMUX_TASKER_APP;
-import com.termux.shared.logger.Logger;
+import com.termux.mod.mod.shared.packages.PackageUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.settings.preferences.TermuxPreferenceConstants.TERMUX_TASKER_APP;
+import com.termux.mod.mod.shared.logger.Logger;
 
 public class TermuxTaskerAppSharedPreferences {
 

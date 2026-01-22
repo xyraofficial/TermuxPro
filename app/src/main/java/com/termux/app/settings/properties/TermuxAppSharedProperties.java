@@ -1,17 +1,17 @@
-package com.termux.app.settings.properties;
+package com.termux.mod.mod.app.settings.properties;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import com.termux.app.terminal.io.KeyboardShortcut;
-import com.termux.shared.terminal.io.extrakeys.ExtraKeysConstants;
-import com.termux.shared.terminal.io.extrakeys.ExtraKeysConstants.EXTRA_KEY_DISPLAY_MAPS;
-import com.termux.shared.terminal.io.extrakeys.ExtraKeysInfo;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.settings.properties.TermuxPropertyConstants;
-import com.termux.shared.settings.properties.TermuxSharedProperties;
-import com.termux.shared.termux.TermuxConstants;
+import com.termux.mod.mod.app.terminal.io.KeyboardShortcut;
+import com.termux.mod.mod.shared.terminal.io.extrakeys.ExtraKeysConstants;
+import com.termux.mod.mod.shared.terminal.io.extrakeys.ExtraKeysConstants.EXTRA_KEY_DISPLAY_MAPS;
+import com.termux.mod.mod.shared.terminal.io.extrakeys.ExtraKeysInfo;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.settings.properties.TermuxPropertyConstants;
+import com.termux.mod.mod.shared.settings.properties.TermuxSharedProperties;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
 
 import org.json.JSONException;
 

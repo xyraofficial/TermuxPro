@@ -1,4 +1,4 @@
-package com.termux.shared.shell;
+package com.termux.mod.mod.shared.shell;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -6,14 +6,14 @@ import android.os.Build;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.android.SELinuxUtils;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.models.errors.Error;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.packages.PackageUtils;
-import com.termux.shared.termux.TermuxUtils;
+import com.termux.mod.mod.shared.android.SELinuxUtils;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.models.errors.Error;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.packages.PackageUtils;
+import com.termux.mod.mod.shared.termux.TermuxUtils;
 
 import java.io.File;
 import java.io.FileInputStream;

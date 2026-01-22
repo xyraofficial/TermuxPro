@@ -1,4 +1,4 @@
-package com.termux.app.terminal;
+package com.termux.mod.mod.app.terminal;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -19,32 +19,32 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.termux.R;
-import com.termux.app.TermuxActivity;
-import com.termux.shared.data.UrlUtils;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.interact.MessageDialogUtils;
-import com.termux.shared.interact.ShareUtils;
-import com.termux.shared.shell.ShellUtils;
-import com.termux.shared.terminal.TermuxTerminalViewClientBase;
-import com.termux.shared.terminal.io.extrakeys.SpecialButton;
-import com.termux.shared.termux.AndroidUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.activities.ReportActivity;
-import com.termux.shared.models.ReportInfo;
-import com.termux.app.models.UserAction;
-import com.termux.app.terminal.io.KeyboardShortcut;
-import com.termux.shared.settings.properties.TermuxPropertyConstants;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.termux.TermuxUtils;
-import com.termux.shared.view.KeyboardUtils;
-import com.termux.shared.view.ViewUtils;
-import com.termux.terminal.KeyHandler;
-import com.termux.terminal.TerminalBuffer;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.terminal.TerminalSession;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.app.TermuxActivity;
+import com.termux.mod.mod.shared.data.UrlUtils;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.interact.MessageDialogUtils;
+import com.termux.mod.mod.shared.interact.ShareUtils;
+import com.termux.mod.mod.shared.shell.ShellUtils;
+import com.termux.mod.mod.shared.terminal.TermuxTerminalViewClientBase;
+import com.termux.mod.mod.shared.terminal.io.extrakeys.SpecialButton;
+import com.termux.mod.mod.shared.termux.AndroidUtils;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.activities.ReportActivity;
+import com.termux.mod.mod.shared.models.ReportInfo;
+import com.termux.mod.mod.app.models.UserAction;
+import com.termux.mod.mod.app.terminal.io.KeyboardShortcut;
+import com.termux.mod.mod.shared.settings.properties.TermuxPropertyConstants;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.markdown.MarkdownUtils;
+import com.termux.mod.mod.shared.termux.TermuxUtils;
+import com.termux.mod.mod.shared.view.KeyboardUtils;
+import com.termux.mod.mod.shared.view.ViewUtils;
+import com.termux.mod.mod.terminal.KeyHandler;
+import com.termux.mod.mod.terminal.TerminalBuffer;
+import com.termux.mod.mod.terminal.TerminalEmulator;
+import com.termux.mod.mod.terminal.TerminalSession;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -141,7 +141,7 @@ public class TermuxTerminalViewClient extends TermuxTerminalViewClientBase {
     }
 
     /**
-     * Should be called when {@link com.termux.view.TerminalView#mEmulator} is set
+     * Should be called when {@link com.termux.mod.mod.view.TerminalView#mEmulator} is set
      */
     @Override
     public void onEmulatorSet() {
@@ -260,7 +260,7 @@ public class TermuxTerminalViewClient extends TermuxTerminalViewClientBase {
                 doPaste();
             } else if (unicodeChar == '+' || e.getUnicodeChar(KeyEvent.META_SHIFT_ON) == '+') {
                 // We also check for the shifted char here since shift may be required to produce '+',
-                // see https://github.com/termux/termux-api/issues/2
+                // see https://github.com.termux.mod.mod/termux-api/issues/2
                 changeFontSize(true);
             } else if (unicodeChar == '-') {
                 changeFontSize(false);
@@ -646,7 +646,7 @@ public class TermuxTerminalViewClient extends TermuxTerminalViewClientBase {
         String transcriptText = ShellUtils.getTerminalSessionTranscriptText(session, false, true);
         if (transcriptText == null) return;
 
-        // See https://github.com/termux/termux-app/issues/1166.
+        // See https://github.com.termux.mod.mod/termux-app/issues/1166.
         transcriptText = DataUtils.getTruncatedCommandOutput(transcriptText, DataUtils.TRANSACTION_SIZE_LIMIT_IN_BYTES, false, true, false).trim();
         ShareUtils.shareText(mActivity, mActivity.getString(R.string.title_share_transcript),
             transcriptText, mActivity.getString(R.string.title_share_transcript_with));

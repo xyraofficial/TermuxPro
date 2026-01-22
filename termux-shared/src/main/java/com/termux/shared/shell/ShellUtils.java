@@ -1,8 +1,8 @@
-package com.termux.shared.shell;
+package com.termux.mod.mod.shared.shell;
 
-import com.termux.terminal.TerminalBuffer;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.terminal.TerminalSession;
+import com.termux.mod.mod.terminal.TerminalBuffer;
+import com.termux.mod.mod.terminal.TerminalEmulator;
+import com.termux.mod.mod.terminal.TerminalSession;
 
 import java.lang.reflect.Field;
 

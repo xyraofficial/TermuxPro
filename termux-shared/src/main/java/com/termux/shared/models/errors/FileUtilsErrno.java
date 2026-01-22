@@ -1,4 +1,4 @@
-package com.termux.shared.models.errors;
+package com.termux.mod.mod.shared.models.errors;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.termux.shared.view;
+package com.termux.mod.mod.shared.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.termux.shared.logger.Logger;
+import com.termux.mod.mod.shared.logger.Logger;
 
 public class ViewUtils {
 

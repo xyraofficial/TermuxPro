@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termux.mod.mod.app;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -9,28 +9,28 @@ import android.os.Binder;
 import android.os.Build;
 import android.os.IBinder;
 
-import com.termux.R;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.data.IntentUtils;
-import com.termux.shared.file.TermuxFileUtils;
-import com.termux.shared.file.filesystem.FileType;
-import com.termux.shared.models.errors.Errno;
-import com.termux.shared.models.errors.Error;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxConstants.TERMUX_APP.RUN_COMMAND_SERVICE;
-import com.termux.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.notification.NotificationUtils;
-import com.termux.app.utils.PluginUtils;
-import com.termux.shared.models.ExecutionCommand;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.shared.data.DataUtils;
+import com.termux.mod.mod.shared.data.IntentUtils;
+import com.termux.mod.mod.shared.file.TermuxFileUtils;
+import com.termux.mod.mod.shared.file.filesystem.FileType;
+import com.termux.mod.mod.shared.models.errors.Errno;
+import com.termux.mod.mod.shared.models.errors.Error;
+import com.termux.mod.mod.shared.termux.TermuxConstants;
+import com.termux.mod.mod.shared.termux.TermuxConstants.TERMUX_APP.RUN_COMMAND_SERVICE;
+import com.termux.mod.mod.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.notification.NotificationUtils;
+import com.termux.mod.mod.app.utils.PluginUtils;
+import com.termux.mod.mod.shared.models.ExecutionCommand;
 
 /**
  * A service that receives {@link RUN_COMMAND_SERVICE#ACTION_RUN_COMMAND} intent from third party apps and
  * plugins that contains info on command execution and forwards the extras to {@link TermuxService}
  * for the actual execution.
  *
- * Check https://github.com/termux/termux-app/wiki/RUN_COMMAND-Intent for more info.
+ * Check https://github.com.termux.mod.mod/termux-app/wiki/RUN_COMMAND-Intent for more info.
  */
 public class RunCommandService extends Service {
 

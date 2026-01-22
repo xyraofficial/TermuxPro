@@ -1,12 +1,12 @@
-package com.termux.shared.file.tests;
+package com.termux.mod.mod.shared.file.tests;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.models.errors.Error;
+import com.termux.mod.mod.shared.file.FileUtils;
+import com.termux.mod.mod.shared.logger.Logger;
+import com.termux.mod.mod.shared.models.errors.Error;
 
 import java.io.File;
 import java.nio.charset.Charset;

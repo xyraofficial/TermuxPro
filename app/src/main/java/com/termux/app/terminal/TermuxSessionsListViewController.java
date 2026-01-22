@@ -1,4 +1,4 @@
-package com.termux.app.terminal;
+package com.termux.mod.mod.app.terminal;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -18,10 +18,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.termux.R;
-import com.termux.app.TermuxActivity;
-import com.termux.shared.shell.TermuxSession;
-import com.termux.terminal.TerminalSession;
+import com.termux.mod.mod.R;
+import com.termux.mod.mod.app.TermuxActivity;
+import com.termux.mod.mod.shared.shell.TermuxSession;
+import com.termux.mod.mod.terminal.TerminalSession;
 
 import java.util.List;
 
