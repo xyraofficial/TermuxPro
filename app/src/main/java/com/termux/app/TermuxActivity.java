@@ -254,6 +254,8 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
 
         setRightSidebarButtons();
 
+        setCommandInputLogic();
+
         registerForContextMenu(mTerminalView);
 
         // Start the {@link TermuxService} and make it run regardless of who is bound to it
@@ -571,6 +573,27 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
             toggleTerminalToolbar();
             return true;
         });
+    }
+
+    private void setCommandInputLogic() {
+        EditText inputField = findViewById(R.id.command_input_field);
+        View sendBtn = findViewById(R.id.btn_send_command);
+
+        inputField.setOnEditorActionListener((v, actionId, event) -> {
+            executeCommandFromInput();
+            return true;
+        });
+
+        sendBtn.setOnClickListener(v -> executeCommandFromInput());
+    }
+
+    private void executeCommandFromInput() {
+        EditText inputField = findViewById(R.id.command_input_field);
+        String cmd = inputField.getText().toString();
+        if (!cmd.isEmpty() && mTermuxService != null && !mTermuxService.isTermuxSessionsEmpty()) {
+            mTermuxService.getLastTermuxSession().getTerminalSession().write(cmd + "\n");
+            inputField.setText("");
+        }
     }
 
     private void setRightSidebarButtons() {

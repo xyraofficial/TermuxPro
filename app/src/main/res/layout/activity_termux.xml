@@ -27,15 +27,65 @@
             android:layout_above="@+id/terminal_toolbar_view_pager"
             android:layout_height="match_parent">
 
-            <com.termux.view.TerminalView
-                android:id="@+id/terminal_view"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:defaultFocusHighlightEnabled="false"
-                android:focusableInTouchMode="true"
-                android:scrollbarThumbVertical="@drawable/terminal_scroll_shape"
-                android:scrollbars="vertical"
-                tools:ignore="UnusedAttribute" />
+                android:orientation="vertical">
+
+                <com.termux.view.TerminalView
+                    android:id="@+id/terminal_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:focusableInTouchMode="true"
+                    android:scrollbarThumbVertical="@drawable/terminal_scroll_shape"
+                    android:scrollbars="vertical"
+                    tools:ignore="UnusedAttribute" />
+
+                <!-- Separated Command Input Box -->
+                <LinearLayout
+                    android:id="@+id/command_input_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#1A1A1A"
+                    android:padding="8dp"
+                    android:elevation="4dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="> "
+                        android:textColor="#FF00FFFF"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/command_input_field"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="Type command here..."
+                        android:textColorHint="#4DFFFFFF"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:imeOptions="actionSend"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1" />
+
+                    <ImageButton
+                        android:id="@+id/btn_send_command"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@android:drawable/ic_menu_send"
+                        android:contentDescription="Send"
+                        app:tint="#FF00FFFF" />
+                </LinearLayout>
+            </LinearLayout>
 
             <!-- Left Sidebar -->
             <LinearLayout
