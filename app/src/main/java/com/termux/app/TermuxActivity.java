@@ -252,6 +252,8 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
 
         setToggleKeyboardView();
 
+        setRightSidebarButtons();
+
         registerForContextMenu(mTerminalView);
 
         // Start the {@link TermuxService} and make it run regardless of who is bound to it
@@ -568,6 +570,32 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
         findViewById(R.id.toggle_keyboard_button).setOnLongClickListener(v -> {
             toggleTerminalToolbar();
             return true;
+        });
+    }
+
+    private void setRightSidebarButtons() {
+        findViewById(R.id.btn_tool_1).setOnClickListener(v -> {
+            if (mTermuxService != null && !mTermuxService.isTermuxSessionsEmpty()) {
+                mTermuxService.getLastTermuxSession().getTerminalSession().write("ls -la\n");
+                showToast("Executing Quick Scripts...", false);
+            }
+            getDrawer().closeDrawers();
+        });
+
+        findViewById(R.id.btn_tool_2).setOnClickListener(v -> {
+            if (mTermuxService != null && !mTermuxService.isTermuxSessionsEmpty()) {
+                mTermuxService.getLastTermuxSession().getTerminalSession().write("cd $HOME && ls\n");
+                showToast("Opening File Explorer...", false);
+            }
+            getDrawer().closeDrawers();
+        });
+
+        findViewById(R.id.btn_tool_3).setOnClickListener(v -> {
+            if (mTermuxService != null && !mTermuxService.isTermuxSessionsEmpty()) {
+                mTermuxService.getLastTermuxSession().getTerminalSession().write("ifconfig\n");
+                showToast("Running Network Tools...", false);
+            }
+            getDrawer().closeDrawers();
         });
     }
 
