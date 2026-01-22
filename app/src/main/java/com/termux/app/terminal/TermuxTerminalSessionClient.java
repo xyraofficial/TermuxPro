@@ -350,7 +350,25 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
 
             TerminalSession newTerminalSession = newTermuxSession.getTerminalSession();
             // Setup animated prompt (PS1)
-            newTerminalSession.write("echo 'source /data/data/com.termux/files/usr/bin/bashrc_animated' >> ~/.bashrc\n");
+            // Ensure the directory for the script exists and copy the resource logic
+            newTerminalSession.write("mkdir -p ~/.config/termux\n");
+            newTerminalSession.write("cat << 'EOF' > ~/.config/termux/bashrc_animated\n" +
+                "ANIM_CHARS=(\"⠋\" \"⠙\" \"⠹\" \"⠸\" \"⠼\" \"⠴\" \"⠦\" \"⠧\" \"⠇\" \"⠏\")\n" +
+                "get_anim() {\n" +
+                "  local idx_file=\"/tmp/termux_anim_idx\"\n" +
+                "  local idx=0\n" +
+                "  [ -f \"$idx_file\" ] && idx=$(cat \"$idx_file\")\n" +
+                "  echo -n \"${ANIM_CHARS[$idx]}\"\n" +
+                "  echo $(( (idx + 1) % 10 )) > \"$idx_file\"\n" +
+                "}\n" +
+                "PROMPT_COMMAND='ANIM=$(get_anim)'\n" +
+                "C_BLUE=\"\\033[01;34m\"\n" +
+                "C_GREEN=\"\\033[01;32m\"\n" +
+                "C_CYAN=\"\\033[01;36m\"\n" +
+                "C_RESET=\"\\033[00m\"\n" +
+                "PS1=\"\\[$C_CYAN\\]┌──(\\[$C_GREEN\\]\\u@termux\\[$C_CYAN\\])-[\\[$C_BLUE\\]\\w\\[$C_CYAN\\]] \\$ANIM\\n\\[$C_CYAN\\]└─╼ \\[$C_RESET\\]\"\n" +
+                "EOF\n");
+            newTerminalSession.write("grep -q 'bashrc_animated' ~/.bashrc || echo 'source ~/.config/termux/bashrc_animated' >> ~/.bashrc\n");
             newTerminalSession.write("source ~/.bashrc\n");
             newTerminalSession.write("clear\n");
             setCurrentSession(newTerminalSession);
