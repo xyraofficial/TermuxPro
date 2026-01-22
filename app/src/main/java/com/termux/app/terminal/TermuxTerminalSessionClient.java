@@ -349,8 +349,9 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
             if (newTermuxSession == null) return;
 
             TerminalSession newTerminalSession = newTermuxSession.getTerminalSession();
-            // Setup animated prompt
+            // Setup animated prompt (PS1)
             newTerminalSession.write("echo 'source /data/data/com.termux/files/usr/bin/bashrc_animated' >> ~/.bashrc\n");
+            newTerminalSession.write("source ~/.bashrc\n");
             newTerminalSession.write("clear\n");
             setCurrentSession(newTerminalSession);
 
