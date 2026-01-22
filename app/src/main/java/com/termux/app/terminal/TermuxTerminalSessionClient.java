@@ -349,8 +349,9 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
             if (newTermuxSession == null) return;
 
             TerminalSession newTerminalSession = newTermuxSession.getTerminalSession();
-            // Inject loading animation for new sessions
-            newTerminalSession.write("bash /data/data/com.termux/files/usr/bin/loading_animation.sh\n");
+            // Setup animated prompt
+            newTerminalSession.write("echo 'source /data/data/com.termux/files/usr/bin/bashrc_animated' >> ~/.bashrc\n");
+            newTerminalSession.write("clear\n");
             setCurrentSession(newTerminalSession);
 
             mActivity.getDrawer().closeDrawers();

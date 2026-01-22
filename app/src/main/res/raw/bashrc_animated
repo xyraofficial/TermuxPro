@@ -1,0 +1,15 @@
+# Custom Animated PS1 for Termux
+# This will show a spinner when commands are being processed or just as a cool visual
+
+# Colors
+C_BLUE="\[\033[01;34m\]"
+C_GREEN="\[\033[01;32m\]"
+C_RESET="\[\033[00m\]"
+C_CYAN="\[\033[01;36m\]"
+
+# Spinner function (simplified for PS1)
+# Note: Real animation in PS1 is tricky because it only redraws on command finish.
+# We will use a "dynamic" status indicator.
+
+PROMPT_COMMAND='EXIT_CODE=$?; if [ $EXIT_CODE -eq 0 ]; then STATUS="✔"; else STATUS="✘"; fi'
+PS1="${C_CYAN}┌──(${C_GREEN}\u@termux${C_CYAN})-[${C_BLUE}\w${C_CYAN}]\n${C_CYAN}└─╼ ${C_RESET}"
