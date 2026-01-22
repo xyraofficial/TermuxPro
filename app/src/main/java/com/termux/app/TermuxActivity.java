@@ -578,7 +578,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
     @SuppressLint("RtlHardcoded")
     @Override
     public void onBackPressed() {
-        if (getDrawer().isDrawerOpen(Gravity.LEFT)) {
+        if (getDrawer().isDrawerOpen(Gravity.LEFT) || getDrawer().isDrawerOpen(Gravity.RIGHT)) {
             getDrawer().closeDrawers();
         } else {
             finishActivityIfNotFinishing();

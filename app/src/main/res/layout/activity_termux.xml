@@ -37,62 +37,105 @@
                 android:scrollbars="vertical"
                 tools:ignore="UnusedAttribute" />
 
+            <!-- Left Sidebar -->
             <LinearLayout
                 android:id="@+id/left_drawer"
                 android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
-                android:background="@android:color/white"
-                android:choiceMode="singleChoice"
-                android:divider="@android:color/transparent"
-                android:dividerHeight="0dp"
-                android:descendantFocusability="blocksDescendants"
+                android:background="#E6121212"
+                android:padding="8dp"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageButton
-                        android:id="@+id/settings_button"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_settings"
-                        android:background="@null"
-                        android:contentDescription="@string/action_open_settings" />
-                </LinearLayout>
+                    android:text="SESSIONS"
+                    android:textColor="#FF00FF00"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
 
                 <ListView
                     android:id="@+id/terminal_sessions_list"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_gravity="top"
                     android:layout_weight="1"
-                    android:choiceMode="singleChoice"
-                    android:longClickable="true" />
+                    android:divider="#33FFFFFF"
+                    android:dividerHeight="1dp" />
 
                 <LinearLayout
-                    style="?android:attr/buttonBarStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
 
-                    <Button
-                        android:id="@+id/toggle_keyboard_button"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/action_toggle_soft_keyboard" />
+                    <ImageButton
+                        android:id="@+id/settings_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_settings"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="@string/action_open_settings" />
+
+                    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
 
                     <Button
                         android:id="@+id/new_session_button"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/action_new_session" />
+                        android:text="NEW" />
                 </LinearLayout>
+            </LinearLayout>
+
+            <!-- Right Sidebar (GUI/Tools) -->
+            <LinearLayout
+                android:id="@+id/right_drawer"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="#E6121212"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ULTIMATE TOOLS"
+                    android:textColor="#FF00FF00"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/btn_tool_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quick Scripts"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/btn_tool_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="File Explorer"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/btn_tool_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Network Tools"
+                    android:layout_marginBottom="12dp" />
+
+                <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="v1.0-Ultimate"
+                    android:textColor="#4DFFFFFF"
+                    android:textSize="10sp"
+                    android:gravity="center" />
             </LinearLayout>
 
         </androidx.drawerlayout.widget.DrawerLayout>
