@@ -198,6 +198,22 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
 
         setContentView(R.layout.activity_termux);
 
+        showSpecialWelcomeAnimation();
+
+        // Load termux shared preferences
+
+        // Delete ReportInfo serialized object files from cache older than 14 days
+        ReportActivity.deleteReportInfoFilesOlderThanXDays(this, 14, false);
+
+        // Load termux shared properties
+        mProperties = new TermuxAppSharedProperties(this);
+
+        setActivityTheme();
+
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_termux);
+
         // Load termux shared preferences
         // This will also fail if TermuxConstants.TERMUX_PACKAGE_NAME does not equal applicationId
         mPreferences = TermuxAppSharedPreferences.build(this, true);
@@ -579,6 +595,21 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
         mLastToast = Toast.makeText(TermuxActivity.this, text, longDuration ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT);
         mLastToast.setGravity(Gravity.TOP, 0, 0);
         mLastToast.show();
+    }
+
+    private void showSpecialWelcomeAnimation() {
+        final View welcomeView = getLayoutInflater().inflate(R.layout.view_welcome_animation, null);
+        addContentView(welcomeView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        View content = welcomeView.findViewById(R.id.welcome_content);
+        android.view.animation.Animation anim = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.welcome_entrance);
+        content.startAnimation(anim);
+
+        welcomeView.postDelayed(() -> {
+            if (welcomeView.getParent() != null) {
+                ((ViewGroup) welcomeView.getParent()).removeView(welcomeView);
+            }
+        }, 3000);
     }
 
 
