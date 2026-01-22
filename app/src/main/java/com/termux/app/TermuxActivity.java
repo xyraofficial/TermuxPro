@@ -434,8 +434,8 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
 
     private void setDrawerTheme() {
         if (mProperties.isUsingBlackUI()) {
-            findViewById(R.id.left_drawer).setBackgroundColor(ContextCompat.getColor(this,
-                android.R.color.background_dark));
+            findViewById(R.id.left_drawer).setBackgroundColor(Color.parseColor("#E6121212"));
+            findViewById(R.id.right_drawer).setBackgroundColor(Color.parseColor("#E6121212"));
             ((ImageButton) findViewById(R.id.settings_button)).setColorFilter(Color.WHITE);
         }
     }
