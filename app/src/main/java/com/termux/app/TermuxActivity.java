@@ -574,7 +574,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
     }
 
     private void setRightSidebarButtons() {
-        findViewById(R.id.btn_tool_1).setOnClickListener(v -> {
+        findViewById(R.id.card_scripts).setOnClickListener(v -> {
             if (mTermuxService != null && !mTermuxService.isTermuxSessionsEmpty()) {
                 mTermuxService.getLastTermuxSession().getTerminalSession().write("ls -la\n");
                 showToast("Executing Quick Scripts...", false);
@@ -582,7 +582,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
             getDrawer().closeDrawers();
         });
 
-        findViewById(R.id.btn_tool_2).setOnClickListener(v -> {
+        findViewById(R.id.card_files).setOnClickListener(v -> {
             if (mTermuxService != null && !mTermuxService.isTermuxSessionsEmpty()) {
                 mTermuxService.getLastTermuxSession().getTerminalSession().write("cd $HOME && ls\n");
                 showToast("Opening File Explorer...", false);
@@ -590,13 +590,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
             getDrawer().closeDrawers();
         });
 
-        findViewById(R.id.btn_tool_3).setOnClickListener(v -> {
-            if (mTermuxService != null && !mTermuxService.isTermuxSessionsEmpty()) {
-                mTermuxService.getLastTermuxSession().getTerminalSession().write("ifconfig\n");
-                showToast("Running Network Tools...", false);
-            }
-            getDrawer().closeDrawers();
-        });
+        findViewById(R.id.btn_exit_gui).setOnClickListener(v -> getDrawer().closeDrawers());
     }
 
 
