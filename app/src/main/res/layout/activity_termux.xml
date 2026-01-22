@@ -231,12 +231,11 @@
 
                 <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btn_exit_gui"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="CLOSE INTERFACE"
-                    app:cornerRadius="8dp"
                     android:backgroundTint="#33FF0000" />
             </LinearLayout>
 
