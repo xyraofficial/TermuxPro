@@ -427,6 +427,9 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
         } else {
             this.setTheme(R.style.Theme_Termux);
         }
+        // Custom Modern UI Styling
+        getWindow().setStatusBarColor(Color.BLACK);
+        getWindow().setNavigationBarColor(Color.BLACK);
     }
 
     private void setDrawerTheme() {
