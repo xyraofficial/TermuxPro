@@ -349,7 +349,7 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
             if (newTermuxSession == null) return;
 
             TerminalSession newTerminalSession = newTermuxSession.getTerminalSession();
-            // Setup animated execution prompt (PS1) with UI-like elements
+            // Setup animated execution prompt and custom welcome UI
             newTerminalSession.write("mkdir -p ~/.config/termux\n");
             newTerminalSession.write("cat << 'EOF' > ~/.config/termux/bashrc_animated\n" +
                 "ANIM_CHARS=(\"⠋\" \"⠙\" \"⠹\" \"⠸\" \"⠼\" \"⠴\" \"⠦\" \"⠧\" \"⠇\" \"⠏\")\n" +
@@ -360,6 +360,28 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
                 "  echo -n \"${ANIM_CHARS[$idx]}\"\n" +
                 "  echo $(( (idx + 1) % 10 )) > \"$idx_file\"\n" +
                 "}\n" +
+                "show_welcome() {\n" +
+                "  clear\n" +
+                "  local C_BLUE=\"\\033[01;34m\"\n" +
+                "  local C_CYAN=\"\\033[01;36m\"\n" +
+                "  local C_WHITE=\"\\033[01;37m\"\n" +
+                "  local C_RESET=\"\\033[00m\"\n" +
+                "  echo -e \"${C_CYAN}╭──────────────────────────────────────────╮\"\n" +
+                "  echo -e \"│${C_WHITE}          WELCOME TO TERMUX AI          ${C_CYAN}│\"\n" +
+                "  echo -e \"╰──────────────────────────────────────────╯\"\n" +
+                "  echo -e \"\"\n" +
+                "  local msg=\"Initializing secure environment...\"\n" +
+                "  for ((i=0; i<${#msg}; i++)); do\n" +
+                "    echo -ne \"${C_BLUE}${msg:$i:1}\"\n" +
+                "    sleep 0.02\n" +
+                "  done\n" +
+                "  echo -e \" ${C_WHITE}[DONE]${C_RESET}\"\n" +
+                "  echo -e \"\"\n" +
+                "}\n" +
+                "if [ ! -f /tmp/termux_welcome_done ]; then\n" +
+                "  show_welcome\n" +
+                "  touch /tmp/termux_welcome_done\n" +
+                "fi\n" +
                 "PROMPT_COMMAND='ANIM=$(get_anim); HISTORY_ID=$(history 1 | awk \"{print \\$1}\")'\n" +
                 "C_BLUE=\"\\033[01;34m\"\n" +
                 "C_GREEN=\"\\033[01;32m\"\n" +
@@ -369,9 +391,9 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
                 "C_RESET=\"\\033[00m\"\n" +
                 "PS1=\"\\n\\[$C_CYAN\\]╭───\\[$C_WHITE\\][ \\$ANIM ]\\[$C_CYAN\\]───\\[$C_BLUE\\][ \\w ]\\[$C_CYAN\\]───\\[$C_WHITE\\][ #\\$HISTORY_ID ]\\n\\[$C_CYAN\\]╰─\\[$C_GREEN\\]\\u@termux\\[$C_CYAN\\]─╼ \\[$C_RESET\\]\"\n" +
                 "EOF\n");
+            newTerminalSession.write("touch ~/.hushlogin\n");
             newTerminalSession.write("grep -q 'bashrc_animated' ~/.bashrc || echo 'source ~/.config/termux/bashrc_animated' >> ~/.bashrc\n");
             newTerminalSession.write("source ~/.bashrc\n");
-            newTerminalSession.write("clear\n");
             setCurrentSession(newTerminalSession);
 
             mActivity.getDrawer().closeDrawers();
