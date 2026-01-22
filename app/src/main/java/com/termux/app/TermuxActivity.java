@@ -441,10 +441,11 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
     }
 
     private void setMargins() {
-        RelativeLayout relativeLayout = findViewById(R.id.activity_termux_root_relative_layout);
-        int marginHorizontal = mProperties.getTerminalMarginHorizontal();
-        int marginVertical = mProperties.getTerminalMarginVertical();
-        ViewUtils.setLayoutMarginsInDp(relativeLayout, marginHorizontal, marginVertical, marginHorizontal, marginVertical);
+        // We now use layout margins in XML for the card effect
+        // RelativeLayout relativeLayout = findViewById(R.id.activity_termux_root_relative_layout);
+        // int marginHorizontal = mProperties.getTerminalMarginHorizontal();
+        // int marginVertical = mProperties.getTerminalMarginVertical();
+        // ViewUtils.setLayoutMarginsInDp(relativeLayout, marginHorizontal, marginVertical, marginHorizontal, marginVertical);
     }
 
 

@@ -365,17 +365,18 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
                 "  local C_BLUE=\"\\033[01;34m\"\n" +
                 "  local C_CYAN=\"\\033[01;36m\"\n" +
                 "  local C_WHITE=\"\\033[01;37m\"\n" +
+                "  local C_PURPLE=\"\\033[01;35m\"\n" +
                 "  local C_RESET=\"\\033[00m\"\n" +
-                "  echo -e \"${C_CYAN}╭──────────────────────────────────────────╮\"\n" +
-                "  echo -e \"│${C_WHITE}          WELCOME TO TERMUX AI          ${C_CYAN}│\"\n" +
+                "  echo -e \"${C_PURPLE}╭──────────────────────────────────────────╮\"\n" +
+                "  echo -e \"│${C_WHITE}          TERMUX ULTIMATE EDITION         ${C_PURPLE}│\"\n" +
                 "  echo -e \"╰──────────────────────────────────────────╯\"\n" +
                 "  echo -e \"\"\n" +
-                "  local msg=\"Initializing secure environment...\"\n" +
+                "  local msg=\"Loading Neural Terminal Interface...\"\n" +
                 "  for ((i=0; i<${#msg}; i++)); do\n" +
-                "    echo -ne \"${C_BLUE}${msg:$i:1}\"\n" +
-                "    sleep 0.02\n" +
+                "    echo -ne \"${C_CYAN}${msg:$i:1}\"\n" +
+                "    sleep 0.01\n" +
                 "  done\n" +
-                "  echo -e \" ${C_WHITE}[DONE]${C_RESET}\"\n" +
+                "  echo -e \" ${C_GREEN}[ONLINE]${C_RESET}\"\n" +
                 "  echo -e \"\"\n" +
                 "}\n" +
                 "if [ ! -f /tmp/termux_welcome_done ]; then\n" +
@@ -386,10 +387,10 @@ public class TermuxTerminalSessionClient extends TermuxTerminalSessionClientBase
                 "C_BLUE=\"\\033[01;34m\"\n" +
                 "C_GREEN=\"\\033[01;32m\"\n" +
                 "C_CYAN=\"\\033[01;36m\"\n" +
-                "C_RED=\"\\033[01;31m\"\n" +
+                "C_PURPLE=\"\\033[01;35m\"\n" +
                 "C_WHITE=\"\\033[01;37m\"\n" +
                 "C_RESET=\"\\033[00m\"\n" +
-                "PS1=\"\\n\\[$C_CYAN\\]╭───\\[$C_WHITE\\][ \\$ANIM ]\\[$C_CYAN\\]───\\[$C_BLUE\\][ \\w ]\\[$C_CYAN\\]───\\[$C_WHITE\\][ #\\$HISTORY_ID ]\\n\\[$C_CYAN\\]╰─\\[$C_GREEN\\]\\u@termux\\[$C_CYAN\\]─╼ \\[$C_RESET\\]\"\n" +
+                "PS1=\"\\n\\[$C_PURPLE\\]╭───\\[$C_WHITE\\][ \\$ANIM ]\\[$C_PURPLE\\]───\\[$C_BLUE\\][ \\w ]\\[$C_PURPLE\\]───\\[$C_WHITE\\][ #\\$HISTORY_ID ]\\n\\[$C_PURPLE\\]╰─\\[$C_CYAN\\]\\u@ultimate\\[$C_PURPLE\\]─╼ \\[$C_RESET\\]\"\n" +
                 "EOF\n");
             newTerminalSession.write("touch ~/.hushlogin\n");
             newTerminalSession.write("grep -q 'bashrc_animated' ~/.bashrc || echo 'source ~/.config/termux/bashrc_animated' >> ~/.bashrc\n");
